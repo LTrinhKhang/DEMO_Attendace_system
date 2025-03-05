@@ -1,0 +1,114 @@
+/* ✅ Định dạng chung */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #fa9393, #817e7e);
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa theo chiều ngang */
+  justify-content: center; /* Căn giữa theo chiều dọc */
+  height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+}
+
+/* ✅ Thanh điều hướng */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Căn giữa các nút điều hướng */
+  gap: 15px;
+  background: #007bff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+nav button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* ✅ Trang nội dung */
+.page {
+  width: 80%;
+  max-width: 900px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Căn giữa nội dung trong phần tử */
+}
+
+.hidden {
+  display: none;
+}
+
+/* ✅ Nút bấm */
+button {
+  background: #3cdb61;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: #218838;
+}
+
+/* ✅ Bảng dữ liệu */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #007bff;
+  color: white;
+}
+
+tr:hover {
+  background: #01c4ff;
+}
+
+/* ✅ Form nhập liệu */
+input {
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* ✅ Nút Xóa */
+button.delete {
+  background: #dc3545;
+}
+
+button.delete:hover {
+  background: #c82333;
+}

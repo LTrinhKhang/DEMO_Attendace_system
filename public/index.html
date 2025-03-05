@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản Lý Điểm Danh</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts/auth.js"></script> <!-- ✅ Kiểm tra đăng nhập -->
+</head>
+<body>
+
+  <!-- ✅ Thanh điều hướng -->
+  <nav>
+    <button onclick="showPage('employeePage')">Nhân Viên</button>
+    <button onclick="showPage('attendancePage')">Điểm Danh</button>
+    <button onclick="showPage('workDurationPage')">Thời Lượng</button>
+    <button onclick="adminLogout()">🚪 Đăng Xuất</button>
+  </nav>
+
+  <!-- ✅ Trang Danh Sách Nhân Viên -->
+<section id="employeePage" class="page">
+  <h2>📋 Danh Sách Nhân Viên</h2>
+
+  <!-- 🔎 Thanh tìm kiếm -->
+  <!-- 🔎 Thanh tìm kiếm -->
+<input type="text" id="searchEmployee" placeholder="🔍 Nhập tên hoặc ID nhân viên..." onkeyup="searchEmployee()">
+  <table>
+    <thead>
+      <tr><th>ID</th><th>Tên</th><th>Hành Động</th></tr>
+    </thead>
+    <tbody id="employeeList"></tbody>
+  </table>
+  <button onclick="fetchEmployees()">🔄 Làm Mới</button>
+</section>
+
+  <!-- ✅ Trang Danh Sách Điểm Danh -->
+  <section id="attendancePage" class="page hidden">
+    <h2>🕒 Danh Sách Điểm Danh</h2>
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Thời Gian</th></tr>
+      </thead>
+      <tbody id="attendanceList"></tbody>
+    </table>
+    <button onclick="fetchAttendanceLogs()">🔄 Làm Mới</button>
+  </section>
+
+  <!-- ✅ Trang Tính Toán Thời Lượng Làm Việc -->
+<section id="workDurationPage" class="page hidden">
+  <h2>⏳ Tính Thời Gian Làm Việc</h2>
+
+  <!-- Chọn ngày để tính toán -->
+  <label for="datePicker">📅 Chọn ngày:</label>
+  <input type="date" id="datePicker">
+
+  <button onclick="calculateWorkDuration()">📊 Tính Toán</button>
+
+  <table>
+    <thead>
+      <tr><th>Nhân Viên</th><th>Thời Gian Làm Việc</th></tr>
+    </thead>
+    <tbody id="workDurationList"></tbody>
+  </table>
+</section>
+
+
+  <script type="module" src="scripts/employee.js"></script>
+  <script type="module" src="scripts/attendance.js"></script>
+  <script src="scripts/workDuration.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
+
